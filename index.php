@@ -7,8 +7,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-<!-- Navbar -->
+<?php 
+require_once("config.php");
+include "formmenu.php";
+?>
+<!-- Navbar
 <ul class="nav justify-content-end">
   <li class="nav-item">
     <a class="nav-link active" href="#">Explica</a>
@@ -23,7 +26,7 @@
     <a class="nav-link" href="#">Área reservada</a>
   </li>
 </ul>
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
     <a class="navbar-brand" href="#">Explica</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -91,41 +94,30 @@
   </div>
 </section>
 
-<!-- Contato -->
-
-<section id="contato" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Contacto</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form>
-          <div class="mb-3">
-            <label for="nome" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="nome" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="email" required>
-          </div>
-          <div class="mb-3">
-            <label for="mensagem" class="form-label">Mensagem</label>
-            <textarea class="form-control" id="mensagem" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Rodapé -->
+<?php
+if(isset($_GET['op'])){
+	$fl="form" . $_GET['op'] . ".php";
+	if(file_exists($fl)){
+		include $fl;
+	}
+	else
+		include 'formerro.php';	
+}
+else
+	include 'formlogin.php';	
 
+
+?>
 <footer class="bg-dark text-white text-center py-3">
   <div class="container">
     <p class="mb-0">© 2025 Explica | Todos os direitos reservados</p>
   </div>
 </footer>
-
+<?php
+$mysqli->close();
+?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

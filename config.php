@@ -3,7 +3,7 @@ if ($_SERVER['SERVER_NAME']=="localhost") {
 	$bd_host="localhost";
 	$bd_user="root";
 	$bd_password="";
-	$bd_database="exemplo2";
+	$bd_database="a16540_explica";
 }
 else {
 	$bd_host="localhost";

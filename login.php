@@ -5,13 +5,13 @@ if (!isset($_SESSION['id']) || $_SESSION['id']!=session_id())  {
 	?>
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="row d-flex justify-content-center align-items-start h-100"> <!-- Alinhamento do conteúdo para o topo -->
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
         <div class="card bg-dark text-white" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
             <div class="mb-md-5 mt-md-4 pb-5">
               <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-              <p class="text-white-50 mb-5">NIGGA</p>
+              <p class="text-white-50 mb-5">Insira o seu e-mail e password</p>
               <div data-mdb-input-init class="form-outline form-white mb-4">
                 <input type="email" id="typeEmailX" class="form-control form-control-lg" />
                 <label class="form-label" for="typeEmailX">Email</label>
@@ -51,3 +51,81 @@ if (!isset($_SESSION['id']) || $_SESSION['id']!=session_id())  {
 }
 ?>
 </div>
+
+<style>
+    /* Ajustando a altura e o estilo do formulário */
+    .card-body {
+        padding: 2rem;
+        height: auto;
+    }
+
+    .card {
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-control-lg {
+        border-radius: 20px;
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+
+    .btn-outline-light {
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-outline-light:hover {
+        background-color: #fff;
+        color: #333;
+    }
+
+    .btn-outline-danger {
+        padding: 10px 30px;
+        font-weight: 600;
+        border-radius: 30px;
+    }
+
+    /* Ajustando o título e legendas */
+    legend {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    h2 {
+        color: #fff;
+    }
+
+    h5 {
+        color: #777;
+    }
+
+    /* Removendo padding do topo */
+    .gradient-custom {
+        padding-top: 0 !important; /* Remove o padding do topo */
+        margin-top: 0 !important; /* Remove qualquer margem superior */
+    }
+
+    /* Ajustando a altura do .container */
+    .container {
+        padding-top: 10px; /* Pequeno ajuste no padding do container */
+    }
+
+    /* Ajustando alinhamento */
+    .vh-100 {
+        margin-top: 0; /* Remove a margem do topo para mover o formulário para cima */
+        margin-bottom: 0;
+    }
+
+    .row {
+        align-items: flex-start !important; /* Alinha o conteúdo do formulário para o topo */
+    }
+</style>

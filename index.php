@@ -1,5 +1,5 @@
 <?php
-require_once("config.php");
+//require_once("config.php");
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +15,7 @@ require_once("config.php");
     padding-left: 0;
     padding-right: 0;
   }
+
 </style>
 
 </head>
@@ -31,7 +32,7 @@ require_once("config.php");
     if (file_exists($fl)) {
       include $fl;
     } else {
-      include 'formerro.php';
+      //include 'formerro.php';
     }
   } else {
     include 'home.php'; // Página inicial por defeito

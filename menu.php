@@ -4,11 +4,7 @@ require_once("config.php");
 
 $t = isset($_SESSION["tipo"]) && $_SESSION["tipo"] !== "" ? $_SESSION["tipo"] : 0;
 
-$mysqli = new mysqli($bd_host, $bd_user, $bd_password, $bd_database);
 
-if ($mysqli->connect_error) {
-  die('Erro: (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
-}
 
 $query = "SELECT * FROM menu WHERE tipo <= ?";
 $statement = $mysqli->prepare($query);

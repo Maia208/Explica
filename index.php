@@ -1,5 +1,6 @@
 <?php
-//require_once("config.php");
+require_once("config.php");
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +21,14 @@
 
 </head>
 <body>
+<?php  
+  $mysqli = new mysqli($bd_host, $bd_user, $bd_password, $bd_database);
 
+  if ($mysqli->connect_error) {
+    die('Erro: (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
+  }
+?>
+<?php include "funcoes.php"; ?>
 <?php include "menu.php"; ?>
 
 <div class="container mt-4">
@@ -32,7 +40,7 @@
     if (file_exists($fl)) {
       include $fl;
     } else {
-      //include 'formerro.php';
+      include 'formerro.php';
     }
   } else {
     include 'home.php'; // Página inicial por defeito

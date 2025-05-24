@@ -12,11 +12,11 @@ if (!isset($_SESSION['id']) || $_SESSION['id']!=session_id())  {
               <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
               <p class="text-white-50 mb-5">Insira o seu e-mail e password</p>
               <div data-mdb-input-init class="form-outline form-white mb-4">
-                <input type="email" id="typeEmailX" class="form-control form-control-lg" name="email" />
+                <input type="email" id="typeEmailX" class="form-control form-control-lg" name="email" required/>
                 <label class="form-label" for="typeEmailX">Email</label>
               </div>
               <div data-mdb-input-init class="form-outline form-white mb-4">
-                <input type="password" id="typePasswordX" class="form-control form-control-lg" name="pass" />
+                <input type="password" id="typePasswordX" class="form-control form-control-lg" name="pass" required/>
                 <label class="form-label" for="typePasswordX">Password</label>
               </div>
               <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" name="login">Login</button>
@@ -31,18 +31,10 @@ if (!isset($_SESSION['id']) || $_SESSION['id']!=session_id())  {
 	<?php
 	}
 	else{
-	?>
-		<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
-			<fieldset>
-				<legend>Bem-Vindo</legend>
-				<h2><?php echo $_SESSION['email'];?></h2>
-				<h5>Sessão:<?php echo $_SESSION['id'];?></h5>
-				<div class="buttons">
-					<button id="submit" name="out" value="out">Sair</button>
-				</div>
-			</fieldset>
-		</form>
-	<?php
+    ?>
+    <p>BKAOPDBJPAOJBADBJPIBVA</p>
+    <?php
+	include "areareservada.php";
 }
 ?>
 </div>

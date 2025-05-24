@@ -11,12 +11,14 @@ session_start();
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
   .full-width-section {
-    width: 100vw;
+    width: 100%;
     margin-left: calc(-50vw + 50%);
     padding-left: 0;
     padding-right: 0;
   }
-
+  .texto{
+    color:black;
+  }
 </style>
 
 </head>
